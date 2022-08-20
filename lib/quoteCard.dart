@@ -3,7 +3,7 @@ import 'package:flutter_application_2/quote.dart';
 
 class QuoteCard extends StatelessWidget {
   final Quote quote;
-  final Function delete;
+  final VoidCallback delete;
   // ignore: use_key_in_widget_constructors
   const QuoteCard({required this.quote, required this.delete});
 
@@ -29,7 +29,7 @@ class QuoteCard extends StatelessWidget {
                 )),
             SizedBox(height: 8.0),
             TextButton.icon(
-              onPressed: () {},
+              onPressed: delete,
               label: Text('delete quote'),
               icon: Icon(Icons.delete),
             )
